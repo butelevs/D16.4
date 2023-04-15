@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Здравствуйте!</h2>
+    <p> Все новости категории "{{ cat_name }}" за прошедшую неделю: </p>
+
+    <table>
+           {% for p in post %}
+           <tr>
+               <td><a href="http://127.0.0.1:8000{{ p.get_absolute_url }}">{{ p.heading }}</a></td>
+           </tr>
+           {% endfor %}
+
+    </table>
+</body>
+</html>

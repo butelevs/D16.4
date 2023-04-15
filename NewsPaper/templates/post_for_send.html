@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Здравствуйте!</h2>
+    <p> В категории, на которую Вы подписаны появилась публикация: {{ post.heading }} </p>
+    <p> Ее краткое содержание: {{ post.text|truncatechars:50 }} </p>
+    <p><a href="http://127.0.0.1:8000{{ post.get_absolute_url }}">Ссылка на публикацию</a></p>
+</body>
+</html>
